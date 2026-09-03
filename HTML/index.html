@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -7,21 +8,20 @@
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/gxk2xsk.css">
     <link rel="stylesheet" href="https://use.typekit.net/gxk2xsk.css">
-    <title>city conditions</title>
+    <title>welcome</title>
     <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
     <script src="../js/hamburger.js" async></script>
-</head>
+  </head>
 
+<body>
 
-
-<body
-    style=" background-image: url('../Assets/Images/fashion photography/city conditions/Alex-Jess_001.jpg');background-repeat: no-repeat;background-size: cover;">
     <!-- navigation bar -->
+
     <header class="topnav wrapper">
 
         <nav>
           <div class="logo-container">
-            <a href="../HTML/index.html">
+            <a href="index.html">
               <img src="../Assets/Images/eye-logo.png" width="35" height="35">
               <img class="hover-logo" src="../Assets/Images/eye-logo-blue.png" width="35" height="35">
             </a>
@@ -67,13 +67,13 @@
     
             <ul class="topnav__links">
               <li class="topnav__item ">
-                <a href="../HTML/works.html" class="topnav__links">work</a>
+                <a href="works.html" class="topnav__links">work</a>
               </li>
               <li class="topnav__item ">
-                <a href="../HTML/about.html" class="topnav__links">about</a>
+                <a href="about.html" class="topnav__links">about</a>
               </li>
               <li class="topnav__item ">
-                <a href="../HTML/contact.html" class="topnav__links">contact</a>
+                <a href="contact.html" class="topnav__links">contact</a>
               </li>
             </ul>
     
@@ -83,30 +83,55 @@
       </header>
 
 
-    <!-- gallery -->
+    <!-- main image -->
 
-    <h2>CONDITIONS OF CITY LIVING</h2>
-
-    <div class="gallery-parent-container">
-        <div class="gallery-container">
-            <img src="../Assets/Images/fashion photography/city conditions/Alex-Jess_001.jpg">
-            <img src="../Assets/Images/fashion photography/city conditions/Jess_001.jpg">
-            <img src="../Assets/Images/fashion photography/city conditions/Alex_001.jpg">
-            <img src="../Assets/Images/fashion photography/city conditions/Jess_002.png">
-            <img src="../Assets/Images/fashion photography/city conditions/Alex-Jess_003.png">
-            <img src="../Assets/Images/fashion photography/city conditions/Alex-Jess_002.jpg">
-
+    <main>
+        <div class="parallax-wrap">
+            <span value="-5">
+                <h1>
+                    <a href="contact.html">
+                        IRIS.IS.IRIS
+                    </a>
+                    
+                </h1>
+            </span>
+            <span value="2">
+                <h2><a href="about.html">multidisciplinary artist based in nyc</a></h2>
+            </span>
+            <span value="3">
+                <h2>
+                    <a href="illustrations.html">[illustrations]</a>
+                    <br><a href="../fashion photography pages/city conditions.html">[photography]</a>
+                    <br><a href="excerpts.html">[writing]</a><br><a href="objects.html">[objects]</a>
+                </h2>
+            </span>
+            <span value="1">
+                <img class="overlay-img" src="../Assets/Images/iris.gif">
+            </span>
+    
+            <div class="main-img-container">
+                <img class="main-img" src="../Assets/Images/iris flower-full.png">
+            </div>
         </div>
-    </div>
+    </main>
 
-    <!-- buttons -->
-
-    <a class="prev" href="garden estates.html">[back]</a>
-    <a class="next" href="color of red.html">[next]</a>
+    
 
 
+    <script>
+        //script for parallax
 
+        document.addEventListener("mousemove", parallax);
+        function parallax(event) {
+            this.querySelectorAll(".parallax-wrap span").forEach((shift) => {
+                const position = shift.getAttribute("value");
+                const x = (window.innerWidth - event.pageX * position) / 90;
+                const y = (window.innerHeight - event.pageY * position) / 90;
+
+                shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+            });
+        }
+    </script>
 </body>
-
 
 </html>
