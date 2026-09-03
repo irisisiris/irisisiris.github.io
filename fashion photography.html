@@ -1,38 +1,84 @@
 <html>
 
 <head>
-    <link rel="icon" type="image/x-icon" href="./Assets/eye-logo.svg">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../Assets/eye-logo.svg">
+    <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/gxk2xsk.css">
     <link rel="stylesheet" href="https://use.typekit.net/gxk2xsk.css">
-    <title>
-        about
-    </title>
-    <!-- <script src="./js/elements.js"></script> -->
-</head>
+    <title>photography</title>
+    <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
+    <script src="../js/hamburger.js" async></script>
+  </head>
 
 <body>
     <!-- navigation bar -->
 
-    <header class="navigation-header">
+    <header class="topnav wrapper">
+
         <nav>
+          <div class="logo-container">
+            <a href="index.html">
+              <img src="../Assets/Images/eye-logo.png" width="35" height="35">
+              <img class="hover-logo" src="../Assets/Images/eye-logo-blue.png" width="35" height="35">
+            </a>
+          </div>
+    
+          <span id="nav-label" hidden>Navigation</span>
+    
+          <button id="btnOpen" class="topnav__open" aria-expanded="false" aria-labelledby="nav-label">
             <div class="logo-container">
-                <a href="index.html">
-                    <img src="./Assets/Images/eye-logo.png" width="35" height="35">
-                    <img class="hover-logo" src="./Assets/Images/eye-logo-blue.png" width="35" height="35">
+              <a>
+                <img src="../Assets/Images/dots-red.png" height="35" />
+                <img class="hover-logo" src="../Assets/Images/dots-blue.png" height="35" />
+              </a>
+            </div>
+          </button>
+    
+          <!-- hamburger menu -->
+    
+          <div class="topnav__menu" role="dialog" aria-labelledby="nav-label">
+    
+            <button class="topnav__close" id="btnClose" aria-label="Close">
+    
+              <!-- aligning logo to top left corner -->
+    
+              <!-- <div class="menu-ham-logo">
+                <div class="logo-container">
+                  <a href="index.html">
+                    <img src="../Assets/Images/eye-logo.png" width="35" height="35">
+                    <img class="hover-logo" src="../Assets/Images/eye-logo-blue.png" width="35" height="35">
+                  </a>
+                </div>
+              </div> -->
+             
+    
+              <div class="logo-container">
+                <a>
+                  <img src="../Assets/Images/dots-red-h.png" height="35" />
+                  <img class="hover-logo" src="../Assets/Images/dots-blue-h.png" height="35" />
                 </a>
-            </div>
-            <div class="navigation-items">
-                <a href="works.html">work</a>
-                <a href="about.html">about</a>
-                <a href="contact.html">contact</a>
-            </div>
-            <div class="hamburger">
-                <span id="openHam">&#9776;</span>
-                <span id="closeHam">&#x2716;</span>
-            </div>
+              </div>
+    
+            </button>
+    
+            <ul class="topnav__links">
+              <li class="topnav__item ">
+                <a href="works.html" class="topnav__links">work</a>
+              </li>
+              <li class="topnav__item ">
+                <a href="about.html" class="topnav__links">about</a>
+              </li>
+              <li class="topnav__item ">
+                <a href="contact.html" class="topnav__links">contact</a>
+              </li>
+            </ul>
+    
+          </div>
+    
         </nav>
-    </header>
+      </header>
 
     <!--marquee-->
 
@@ -91,19 +137,23 @@
 
 <!-- gallery -->
 
+<main>
     <div class="gallery-parent-container">
         <div class="gallery-container">
-            <img data-src="./Assets/Images/fashion photography/CHEN_001.jpg" alt="">
-            <img src="./Assets/Images/fashion photography/CHEN_002.jpg" alt="">
-            <img src="./Assets/Images/fashion photography/CHEN_003.jpg" alt="">
-            <img src="./Assets/Images/fashion photography/CHEN_004.jpg" alt="">
-            <img src="./Assets/Images/fashion photography/CHEN_003 (1).jpg" alt="">
-            <img src="./Assets/Images/fashion photography/CHEN_006.jpg" alt="">
-            <img src="./Assets/Images/fashion photography/Qiqi_001.jpg" alt="">
-            <img src="./Assets/Images/fashion photography/Alina_001.png" alt="">
-            <img src="./Assets/Images/fashion photography/Betul_001.png" alt="">
+            <img data-src="../Assets/Images/fashion photography/CHEN_001.jpg" alt="">
+            <img src="../Assets/Images/fashion photography/CHEN_002.jpg" alt="">
+            <img src="../Assets/Images/fashion photography/CHEN_003.jpg" alt="">
+            <img src="../Assets/Images/fashion photography/CHEN_004.jpg" alt="">
+            <img src="../Assets/Images/fashion photography/CHEN_003 (1).jpg" alt="">
+            <img src="../Assets/Images/fashion photography/CHEN_006.jpg" alt="">
+            <img src="../Assets/Images/fashion photography/Qiqi_001.jpg" alt="">
+            <img src="../Assets/Images/fashion photography/Alina_001.png" alt="">
+            <img src="../Assets/Images/fashion photography/Betul_001.png" alt="">
         </div>
     </div>
+</main>
+
+   
 
 
 

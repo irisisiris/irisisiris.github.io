@@ -63,7 +63,7 @@ body {
 }
 
 body {
-    background-image: url('./Assets/Images/dried tulips.JPG');
+    background-image: url('../Assets/Images/dried tulips.JPG');
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
@@ -182,6 +182,7 @@ p{
 
 /* navigation bar */
 
+
 .navigation-header {
     background-color: transparent;
     padding: 0 15px;
@@ -203,6 +204,125 @@ nav {
     padding-left: 15px;
     padding-right: 15px;
 }
+
+/* nav-bar-top */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1.5rem;
+  }
+  .topnav button {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    cursor: pointer;
+  }
+
+
+  @media (width >= 40em) {
+    .topnav button {
+      display: none;
+    }
+  }
+  .topnav__open[aria-expanded=true] + .topnav__menu {
+    translate: 0;
+  }
+  @media (prefers-reduced-motion) {
+    .topnav__open[aria-expanded=true] + .topnav__menu {
+      opacity: 1;
+    }
+  }
+  .topnav__close {
+    display: block;
+    margin-inline-start: auto;
+    margin-block-end: 8rem;
+    position: relative;
+  }
+
+  /* aligning logo to top left corner */
+/* 
+  .menu-ham-logo{
+    po
+    padding-right: 60vh;
+  } */
+
+  @media (width < 40em) {
+    .topnav__menu {
+      position: fixed;
+      inset: 0;
+      padding: 15px 15px;
+      background-image: url('../Assets/Images/dried tulips.JPG');
+      background-repeat: no-repeat;
+      background-size: cover;
+      translate: 100vw 0;
+      transition: translate 0.5s ease-in-out;
+      z-index: 5;
+    }
+  }
+  @media (width < 40em) and (prefers-reduced-motion) {
+    .topnav__menu {
+      translate: 0;
+      opacity: 0;
+      transition: opacity 500ms ease-in-out;
+    }
+
+  }
+  .topnav__links {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  @media (width < 40em) {
+    .topnav__links {
+      flex-direction: column;
+    }
+  }
+  .topnav__item {
+    list-style-type: none;
+   
+  }/*# sourceMappingURL=style.css.map */
+
+  .topnav__item>a{
+    font-family: "nitti-typewriter-open", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    padding: 0rem;
+    color: #EF4041;
+    text-decoration: none;
+    transition: .6s ease-in-out;
+  }
+
+  .topnav__item>a:hover{
+    text-decoration: none;
+    color: #82B8BF;
+  }
+
+  .wrapper {
+    width: min(100% - 3rem, 56.25rem);
+    margin-inline: auto;
+    background-color: transparent;
+    padding: 0 15px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+  }
+
 
 /* logo */
 
@@ -281,6 +401,7 @@ nav {
     font-size: 30px;
     font-weight: 50;
     color: #EF4041;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -347,7 +468,7 @@ nav {
     display: flex;
     position: relative;
     height: 90%;
-    width: 250px;
+    width: 550px;
     justify-content: center;
     overflow-y: hidden;
 
@@ -359,6 +480,20 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.content{
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
 }
 
 /* ABOUT PAGE STYLES */
@@ -377,6 +512,8 @@ nav {
     color: #82B8BF;
     text-align: left;
 }
+
+
 
 
 

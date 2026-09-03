@@ -1,20 +1,20 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="../Assets/eye-logo.svg">
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="https://use.typekit.net/gxk2xsk.css">
-    <link rel="stylesheet" href="https://use.typekit.net/gxk2xsk.css">
-    <title>welcome</title>
-    <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
-    <script src="../js/hamburger.js" async></script>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="../Assets/eye-logo.svg">
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="https://use.typekit.net/gxk2xsk.css">
+        <link rel="stylesheet" href="https://use.typekit.net/gxk2xsk.css">
+        <title>objects</title>
+        <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
+        <script src="../js/hamburger.js" async></script>
+      </head>
+</head>
 
 <body>
-
     <!-- navigation bar -->
 
     <header class="topnav wrapper">
@@ -82,35 +82,12 @@
         </nav>
       </header>
 
-
-    <!-- main image -->
+    <!-- gallery -->
 
     <main>
-        <div class="parallax-wrap">
-            <span value="-5">
-                <h1>
-                    <a href="contact.html">
-                        IRIS.IS.IRIS
-                    </a>
-                    
-                </h1>
-            </span>
-            <span value="2">
-                <h2><a href="about.html">multidisciplinary artist based in nyc</a></h2>
-            </span>
-            <span value="3">
-                <h2>
-                    <a href="illustrations.html">[illustrations]</a>
-                    <br><a href="../fashion photography pages/city conditions.html">[photography]</a>
-                    <br><a href="excerpts.html">[writing]</a><br><a href="objects.html">[objects]</a>
-                </h2>
-            </span>
-            <span value="1">
-                <img class="overlay-img" src="../Assets/Images/iris.gif">
-            </span>
+        <div class="gallery-parent-container" style="z-index: -1;">
+            <div class="gallery-container">
     
-            <div class="main-img-container">
-                <img class="main-img" src="../Assets/Images/iris flower-full.png">
             </div>
         </div>
     </main>
@@ -118,20 +95,8 @@
     
 
 
-    <script>
-        //script for parallax
 
-        document.addEventListener("mousemove", parallax);
-        function parallax(event) {
-            this.querySelectorAll(".parallax-wrap span").forEach((shift) => {
-                const position = shift.getAttribute("value");
-                const x = (window.innerWidth - event.pageX * position) / 90;
-                const y = (window.innerHeight - event.pageY * position) / 90;
-
-                shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
-            });
-        }
-    </script>
 </body>
+
 
 </html>
